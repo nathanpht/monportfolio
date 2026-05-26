@@ -2,7 +2,7 @@
 
 html {
     scroll-behavior: smooth !important;
-    scroll-padding-top: 90px; /* Évite que le menu fixe ne cache le titre des sections lors du scroll */
+    scroll-padding-top: 90px;
 }
 
 :root {
@@ -33,7 +33,6 @@ nav ul li a:hover { color: var(--accent-blue); }
 
 .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 
-/* Taille agrandie pour accueillir la photo proprement */
 .avatar-circle { 
     width: 180px; 
     height: 180px; 
@@ -48,14 +47,39 @@ nav ul li a:hover { color: var(--accent-blue); }
     overflow: hidden; 
 }
 
-/* Force l'image à occuper tout l'espace de manière proportionnelle */
 .avatar-circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* MODIFICATION : Agrandissement et mise en valeur des icônes réseaux sociaux */
+/* AJOUT : Style du bouton CV */
+.cv-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    background: var(--accent-blue);
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+    transform: translateY(-2px);
+}
+
 .social-links {
     display: flex;
     gap: 25px;
@@ -64,14 +88,14 @@ nav ul li a:hover { color: var(--accent-blue); }
 
 .social-links a {
     color: var(--text-dim);
-    font-size: 2rem; /* Augmentation importante de la taille du logo */
+    font-size: 2rem; 
     transition: all 0.3s ease;
     display: inline-block;
 }
 
 .social-links a:hover {
     color: var(--accent-blue);
-    transform: scale(1.2); /* Léger effet de zoom au survol */
+    transform: scale(1.2); 
     text-shadow: 0 0 15px var(--accent-blue);
 }
 
@@ -82,7 +106,6 @@ section { padding: 100px 8% 60px; }
 
 .grid-3, .grid-3-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
 
-/* RESTRUCTURATION DES PROJETS EN FLEXBOX POUR ÉVITER LE TROU VIDE */
 .grid-projects { 
     display: flex;
     flex-wrap: wrap;
@@ -99,7 +122,6 @@ section { padding: 100px 8% 60px; }
     height: 100%;
 }
 
-/* Force les liens GitHub à s'aligner tout en bas de la carte */
 .grid-projects .project-card .project-links {
     margin-top: auto;
     padding-top: 15px;
@@ -111,19 +133,16 @@ section { padding: 100px 8% 60px; }
 .icon-circle { width: 45px; height: 45px; background: rgba(0, 229, 255, 0.1); border-radius: 10px; display: flex; justify-content: center; align-items: center; color: var(--accent-blue); margin-bottom: 20px; }
 .badge { background: #1a1a1a; padding: 4px 10px; border-radius: 6px; font-size: 0.7rem; color: var(--accent-blue); font-weight: 600; }
 
-/* COMPÉTENCES DÉTAILS */
 .skill-details { max-height: 0; overflow: hidden; transition: 0.5s ease; opacity: 0; }
 .skill-card.active .skill-details { max-height: 300px; opacity: 1; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border); }
 .details-link { cursor: pointer; color: var(--text-dim); font-size: 0.85rem; margin-top: 20px; display: block; text-decoration: underline; }
 
-/* STYLE PROJETS */
 .tags { display: flex; gap: 10px; margin-bottom: 20px; }
 .tags span { background: #121212; border: 1px solid var(--border); color: var(--text-dim); padding: 6px 15px; border-radius: 30px; font-size: 0.85rem; }
 .mobilise-container { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 25px; display: flex; align-items: center; gap: 8px; }
 .badge-comp { background: #ffffff; color: #000; font-weight: 700; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
 .project-links a { color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 1rem; }
 
-/* BLOC CONTACT AVEC BADGE ET COORDONNÉES ALIGNÉS */
 .contact-container { 
     display: grid; 
     grid-template-columns: 1.3fr 1fr; 

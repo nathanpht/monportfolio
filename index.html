@@ -29,6 +29,12 @@
         <p class="role">Développeur Informatique</p>
         <p class="hero-objective">🎯 Objectif : Recherche d'alternance en développement web / logiciel</p>
         
+        <div class="cv-container">
+            <a href="CV_Nathan_Philippot.pdf" download="CV_Nathan_Philippot.pdf" class="btn-cv">
+                <i class="fas fa-download"></i> Télécharger mon CV
+            </a>
+        </div>
+        
         <div class="social-links">
             <a href="https://github.com/nathanpht" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/nathan-philippot-9a896b3b9" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -235,7 +241,6 @@
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
     <script>
-        // Script pour dérouler les compétences
         document.querySelectorAll('.details-link').forEach(link => {
             link.addEventListener('click', function() {
                 const card = this.closest('.skill-card');
@@ -244,9 +249,8 @@
             });
         });
 
-        // NOUVEAU SCRIPT : Récupère les données et ouvre le client de messagerie
         function ouvrirBoiteMail(event) {
-            event.preventDefault(); // Empêche le rechargement automatique de la page
+            event.preventDefault();
             
             const nom = document.getElementById('contact-nom').value;
             const emailClient = document.getElementById('contact-email').value;
@@ -255,7 +259,6 @@
             const sujet = encodeURIComponent("Contact Portfolio - " + nom);
             const corpsEmail = encodeURIComponent("Bonjour Nathan,\n\n" + message + "\n\n---\nMessage envoyé par : " + nom + " (" + emailClient + ")");
             
-            // Déclenche l'ouverture de l'application de messagerie par défaut
             window.location.href = "mailto:nathanphilippot56@gmail.com?subject=" + sujet + "&body=" + corpsEmail;
         }
     </script>
